@@ -1,103 +1,458 @@
-import Image from "next/image";
+'use client'
+import { useState } from 'react';
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const [activeTab, setActiveTab] = useState("about");
+  const myDate = new Date();
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  const experiences = [
+    {
+      company: "MBC",
+      role: "Fullstack Software Engineer",
+      period: "July 2025 – Present",
+      location: "Remote",
+      description:
+        "Developing a digital radio and podcast platform called MBC (Media Broadcasting Channel). This platform allows for live audio broadcasting and pre-recorded shows accessible anytime.",
+      stack: [
+        "Flutter",
+        "Dart",
+        "NestJS",
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "PostgreSQL",
+        "Firebase",
+      ],
+    },
+    {
+      company: "GoBus",
+      role: "Fullstack web Developer",
+      period: "November 2023 - Current",
+      location: "Remote",
+      description:
+        "Development of web services (Sass) and virtual payment services of the platform Stack: Nextjs,Typescript,Tailwind css & Firebase. • web site official",
+      stack: ["Next.js", "TypeScript", "Firebase", "Tailwind CSS"],
+    },
+    {
+      company: "Campusco",
+      role: "Fullstack Developer",
+      period: "Nov 2023 – July 2025",
+      location: "Remote",
+      description:
+        "Campusco® is a distance learning platform that provides universities with a customizable and comprehensive online teaching environment.",
+      stack: [
+        "React.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "PostgreSQL",
+        "Firebase",
+      ],
+    },
+    {
+      company: "GoBus",
+      role: "Senior Fullstack Flutter Developer",
+      period: "June 2023 – Present",
+      location: "Remote",
+      description:
+        "Development of a GPS-based school bus tracking system aimed at enhancing student safety in DRC.",
+      stack: ["Flutter", "Dart", "DartFrog", "Firebase"],
+    },
+    {
+      company: "Connectis",
+      role: "Senior Flutter Software Engineer",
+      period: "March 2020 – June 2023",
+      location: "Goma",
+      description:
+        "Developed the Connectis Client app, which enables users to activate internet access codes through Cambium devices deployed in public spaces.",
+      stack: ["Flutter", "Dart", "Kotlin", "Swift", "Node.js", "PostgreSQL"],
+    },
+    {
+      company: "Synapse-Hub",
+      role: "Junior Software Engineer",
+      period: "July 2018 – January 2019",
+      location: "Goma",
+      description:
+        "Developed STROM POS, a mobile application for gas station agents to manage stock and customers.",
+      stack: ["Kotlin", "Java"],
+    },
+  ];
+
+  const projects = [
+    {
+      name: "MBC - Media Broadcasting Channel",
+      description:
+        "A digital radio and podcast platform for live and on-demand audio content.",
+      stack: [
+        "Flutter",
+        "Dart",
+        "NestJS",
+        "Firebase",
+        "PostgreSQL",
+        "Next.js",
+      ],
+      links: [
+        {
+          name: "Coming Soon",
+          url: "#",
+        },
+      ],
+    },
+
+    {
+      name: "GoBus web",
+      description:
+        "Development of web services (Sass) and virtual payment services of the platform",
+      stack: ["Next.js", "TypeScript", "Firebase", "Tailwind CSS"],
+      links: [
+        {
+          name: "Gobus official web site",
+          url: "https://gobus-website.web.app/",
+        }
+      ],
+    },
+
+    {
+      name: "Campusco",
+      description:
+        "An online learning platform for universities with customizable features.",
+      stack: ["React.js", "TypeScript", "Tailwind CSS", "Firebase"],
+      links: [
+        {
+          name: "Visit Website",
+          url: "https://campusco.net/ ",
+        },
+      ],
+    },
+    {
+      name: "GoBus App",
+      description:
+        "GPS tracking application for school buses to improve student safety.",
+      stack: ["Flutter", "Dart", "Firebase"],
+      links: [
+        {
+          name: "Google Play",
+          url: "https://play.google.com/store/apps/details?id=cd.gobus.app",
+        },
+        {
+          name: "App Store",
+          url: " https://apps.apple.com/cd/app/gobus/id6449877399 ",
+        },
+      ],
+    },
+    {
+      name: "Connectis Client",
+      description:
+        "Mobile app for managing internet access codes and connecting to Cambium devices.",
+      stack: ["Flutter", "Dart", "Kotlin", "Swift", "PostgreSQL"],
+      links: [
+        {
+          name: "Google Play",
+          url: "https://play.google.com/store/apps/details?id=com.connectis.connectis_user",
+        },
+      ],
+    },
+    {
+      name: "STROM POS",
+      description:
+        "Mobile app for gas station agents to manage stock and customers.",
+      stack: ["Kotlin", "Java"],
+      links: [
+        {
+          name: "Google Play",
+          url: " https://play.google.com/store/apps/details?id=com.alohadynamics.storm_station_mobile",
+        },
+      ],
+    },
+  ];
+
+  const skills = {
+    languages: ["TypeScript", "Kotlin", "Dart", "C#"],
+    frameworks: [
+      "Flutter",
+      "React",
+      "React Native",
+      "Next.js",
+      "NestJS",
+      "Express.js",
+      "Tailwind CSS"
+    ],
+    databases: ["PostgreSQL", "MySQL", "Firebase", "Superbase", "Appwrite", "MongoDB"],
+    others: ["Git", "Docker", "Swagger", "Api", "Agile / SCRUM"],
+  };
+
+  const education = {
+    degree: "BAC 5 in Software Engineering and Computer Science",
+    school: "ISIG Goma",
+    period: "2016 – 2020",
+    specialization: "Computer Engineering",
+  };
+
+  return (
+    <div className="bg-white text-gray-800 font-sans">
+      {/* Header */}
+      <header className="bg-gray-900 text-white p-6 shadow-md fixed w-full z-10">
+        <div className="container mx-auto flex justify-between items-center">
+          <h1 className="text-2xl font-bold">Pascal C. <span className='font-light'>Software Engineer</span></h1>
+          <nav className="space-x-6 hidden md:flex">
+            <a
+              href="#about"
+              onClick={() => setActiveTab("about")}
+              className={`hover:underline ${activeTab === "about" ? "font-bold" : ""
+                }`}
+            >
+              About me
+            </a>
+            <a
+              href="#experience"
+              onClick={() => setActiveTab("experience")}
+              className={`hover:underline ${activeTab === "experience" ? "font-bold" : ""
+                }`}
+            >
+              Experience
+            </a>
+            <a
+              href="#projects"
+              onClick={() => setActiveTab("projects")}
+              className={`hover:underline ${activeTab === "projects" ? "font-bold" : ""
+                }`}
+            >
+              Projets
+            </a>
+            <a
+              href="#skills"
+              onClick={() => setActiveTab("skills")}
+              className={`hover:underline ${activeTab === "skills" ? "font-bold" : ""
+                }`}
+            >
+              Skills
+            </a>
+            <a
+              href="#contact"
+              onClick={() => setActiveTab("contact")}
+              className={`hover:underline ${activeTab === "contact" ? "font-bold" : ""
+                }`}
+            >
+              Contact
+            </a>
+          </nav>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </header>
+
+      {/* About Section */}
+      <section
+        id="about"
+        className="pt-24 pb-16 bg-gray-100 px-6 text-center"
+      >
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="text-3xl font-bold mb-4">About me</h2>
+          <p className="text-lg leading-relaxed text-justify">
+            I’m a passionate and dedicated software engineer with several years of experience in building modern, high-performance web and mobile applications.
+            Strong technical expertise:
+            Native and cross-platform mobile development <span className='font-extrabold'>(Flutter,React-Native,Kotlin)</span>  Dynamic and responsive web development with <span className='font-extrabold'> Next.js, React, and Tailwind CSS Scalable backend architecture using NestJS. </span>
+            Proficient in project planning, technical documentation, and agile teamwork
+            Whether it's Android, iOS, or web platforms, I bring innovative and reliable solutions tailored to real-world needs. I take pride in delivering quality results through collaboration and user-focused design.
+            If you’re looking for a versatile, passionate, and results-driven developer to join your team or elevate your project — let’s connect! I’m ready to bring your vision to life. <span className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'>pascalkasichiza@gmail.com</span>
+          </p>
+        </div>
+      </section>
+
+      {/* Experience Section */}
+      <section id="experience" className="py-16 px-6">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="text-3xl font-bold mb-8 text-center">
+            Professional experience
+          </h2>
+          {experiences.map((exp, index) => (
+            <div key={index} className="mb-8">
+              <h3 className="text-xl font-semibold">{exp.role} | {exp.company}</h3>
+              <p className="text-gray-600">{exp.period}</p>
+              <p className="mt-2">{exp.description}</p>
+              <ul className="flex flex-wrap mt-2 gap-2">
+                {exp.stack.map((tech, i) => (
+                  <li
+                    key={i}
+                    className="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full"
+                  >
+                    {tech}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Projects Section */}
+      <section id="projects" className="py-16 bg-gray-100 px-6">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="text-3xl font-bold mb-8 text-center">Completed Projects</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {projects.map((project, index) => (
+              <div
+                key={index}
+                className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow"
+              >
+                <h3 className="text-xl font-semibold mb-2">{project.name}</h3>
+                <p className="mb-4">{project.description}</p>
+                <ul className="flex flex-wrap gap-2 mb-4">
+                  {project.stack.map((tech, i) => (
+                    <li
+                      key={i}
+                      className="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full"
+                    >
+                      {tech}
+                    </li>
+                  ))}
+                </ul>
+                <div className="flex gap-2">
+                  {project.links.map((link, i) => (
+                    <a
+                      key={i}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-500 hover:underline text-sm"
+                    >
+                      {link.name}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Skills Section */}
+      <section id="skills" className="py-16 px-6">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="text-3xl font-bold mb-8 text-center">Skills</h2>
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-xl font-semibold mb-2">Langages</h3>
+              <ul className="flex flex-wrap gap-2">
+                {skills.languages.map((lang, index) => (
+                  <li
+                    key={index}
+                    className="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full"
+                  >
+                    {lang}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-2">Frameworks</h3>
+              <ul className="flex flex-wrap gap-2">
+                {skills.frameworks.map((framework, index) => (
+                  <li
+                    key={index}
+                    className="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full"
+                  >
+                    {framework}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-2">Data base</h3>
+              <ul className="flex flex-wrap gap-2">
+                {skills.databases.map((db, index) => (
+                  <li
+                    key={index}
+                    className="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full"
+                  >
+                    {db}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold mb-2">Others</h3>
+              <ul className="flex flex-wrap gap-2">
+                {skills.others.map((tool, index) => (
+                  <li
+                    key={index}
+                    className="bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full"
+                  >
+                    {tool}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Education Section */}
+      {/* <section id="education" className="py-16 bg-gray-100 px-6">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="text-3xl font-bold mb-8 text-center">Education</h2>
+          <div>
+            <h3 className="text-xl font-semibold">{education.degree}</h3>
+            <p>{education.school}</p>
+            <p className="text-gray-600">{education.period}</p>
+            <p>Specialization : {education.specialization}</p>
+          </div>
+        </div>
+      </section> */}
+
+      { }
+      <section id="education" className="py-16 bg-gray-100 px-6">
+        <div className="container mx-auto max-w-4xl">
+          <h2 className="text-3xl font-bold mb-8 text-center">Languages</h2>
+          <div>
+            <h3 className="text-xl font-semibold">French</h3>
+            <p>Native</p>
+          </div>
+
+          <div>
+            <h3 className="text-xl font-semibold">Swahili</h3>
+            <p>Native</p>
+          </div>
+
+          <div>
+            <h3 className="text-xl font-semibold">English</h3>
+            <p>Conversation</p>
+          </div>
+        </div>
+      </section>
+
+
+
+
+      {/* Contact Section */}
+      <section id="contact" className="py-16 px-6">
+        <div className="container mx-auto max-w-4xl text-center">
+          <h2 className="text-3xl font-bold mb-6">Contact me</h2>
+          <p className="mb-4">
+            📩 Email:{" "}
+            <a
+              href="mailto:pascalkasichiza@gmail.com"
+              className="text-blue-500"
+            >
+              pascalkasichiza@gmail.com
+            </a>
+          </p>
+          <p>
+            🔗 LinkedIn:{" "}
+            <a
+              href=" https://www.linkedin.com/in/pascal-chiza-kasi-5288031b5/ "
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500"
+            >
+              My LinkedIn profile
+            </a>
+          </p>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-900 text-white text-center py-4">
+        <p>© {myDate.getFullYear()} Pascal C. All rights reserved.</p>
       </footer>
     </div>
   );
+
 }
