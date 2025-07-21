@@ -12,16 +12,27 @@ export default function Home() {
       period: "July 2025 – Present",
       location: "Remote",
       description:
-        "Developing a digital radio and podcast platform called MBC (Media Broadcasting Channel). This platform allows for live audio broadcasting and pre-recorded shows accessible anytime.",
+        "Developing a digital radio and podcast platform enabling both live audio broadcasting and on-demand access to pre-recorded shows.",
+      subTitle: " My responsibilities include:",
+      subInfo: [
+        "System architecture design and data model analysis for scalable and maintainable infrastructure.",
+        "Database creation, design, and optimization using PostgreSQL and Firebase, tailored to audio content workflows.",
+        "Deployment and orchestration of services on AWS(EC2, S3, CloudFront, RDS), ensuring high availability and performance.",
+        "Integration of DevOps practices, including CI/ CD pipelines, Docker containerization, and automated deployments using GitHub Actions.",
+        "Audio stream handling, podcast scheduling, and integration with third - party streaming tools like Icecast.",
+        "Admin interface development with Next.js and Tailwind CSS for content management and analytics."
+      ],
       stack: [
         "Flutter",
         "Dart",
         "NestJS",
-        "Next.js",
-        "TypeScript",
-        "Tailwind CSS",
-        "PostgreSQL",
         "Firebase",
+        "PostgreSQL",
+        "Next.js",
+        "DevOps",
+        "AWS",
+        "CI/CD",
+        "GitHub Actions"
       ],
     },
     {
@@ -30,8 +41,28 @@ export default function Home() {
       period: "November 2023 - Current",
       location: "Remote",
       description:
-        "Development of web services (Sass) and virtual payment services of the platform Stack: Nextjs,Typescript,Tailwind css & Firebase. • web site official",
-      stack: ["Next.js", "TypeScript", "Firebase", "Tailwind CSS"],
+        "Development of web services (SaaS) and virtual payment services for the official platform website",
+      subTitle: " My responsibilities include:",
+      subInfo: [
+        "Frontend development with Next.js and TypeScript for a fast, scalable, and SEO-friendly web application.",
+        "UI design using Tailwind CSS for responsive and modular styling.",
+        "Firebase integration for user authentication, Firestore database, and cloud functions.",
+        "Integration of virtual payment services to enable seamless online transactions (e.g., Mobile money, bank Pay",
+        "Database creation and design analysis: conception of scalable Firestore data models based on business logic and user flows; security rules and indexing optimized for performance.",
+        "Functional and technical design (UML, user stories, entity-relationship diagrams) to ensure maintainable and scalable architecture.",
+        "Deployment on AWS: S3 for static hosting, CloudFront for CDN distribution, AWS, and monitoring via AWS CloudWatch",
+        "DevOps pipeline setup: GitHub Actions / GitLab CI for CI/CD pipeline, automatic deployment on staging and production environments with environment-based configuration and rollback strategy.",
+        "Performance optimization (image lazy loading, prefetching, font optimization) and web accessibility."
+      ],
+      stack: [
+        "Next.js",
+        "TypeScript",
+        "Firebase",
+        "Tailwind CSS",
+        "DevOps",
+        "AWS",
+        "CI/CD",
+        "GitHub Actions"],
     },
     {
       company: "Campusco",
@@ -40,12 +71,22 @@ export default function Home() {
       location: "Remote",
       description:
         "Campusco® is a distance learning platform that provides universities with a customizable and comprehensive online teaching environment.",
+      subTitle: " My responsibilities include:",
+      subInfo: [
+        "As part of the development team, I was involved in the database design and creation, performing analysis and modeling of the data structure to ensure scalability and integrity.",
+        "I also contributed to the deployment of the platform on AWS.",
+      ],
+
       stack: [
         "React.js",
         "TypeScript",
         "Tailwind CSS",
         "PostgreSQL",
         "Firebase",
+        "DevOps",
+        "AWS",
+        "CI/CD",
+        "GitHub Actions"
       ],
     },
     {
@@ -55,7 +96,12 @@ export default function Home() {
       location: "Remote",
       description:
         "Development of a GPS-based school bus tracking system aimed at enhancing student safety in DRC.",
-      stack: ["Flutter", "Dart", "DartFrog", "Firebase"],
+      subTitle: "",
+      subInfo: [
+        "This project integrates real-time geolocation, dynamic map rendering, and smooth animations to ensure precise and fluid bus tracking for parents and school administrators. It features robust state management (BLoC, Provider) and a highly responsive and intuitive user interface (UI) designed with a focus on user experience.",
+        "The system follows software engineering best practices, including modular architecture, clean code principles, and scalable infrastructure. Deployment and updates are automated through CI/CD pipelines (GitHub Actions, Firebase Hosting), ensuring reliability and fast iteration. The platform also includes rigorous testing and error monitoring tools to maintain high code quality and system stability.",
+      ],
+      stack: ["Flutter", "Dart", "DartFrog", "Bloc", "Firebase", "CI/CD"],
     },
     {
       company: "Connectis",
@@ -63,8 +109,19 @@ export default function Home() {
       period: "March 2020 – June 2023",
       location: "Goma",
       description:
-        "Developed the Connectis Client app, which enables users to activate internet access codes through Cambium devices deployed in public spaces.",
-      stack: ["Flutter", "Dart", "Kotlin", "Swift", "Node.js", "PostgreSQL"],
+        "Developed the Connectis Client app, a mobile application that allows users to activate and manage internet access codes via Cambium devices deployed in public or semi-public environments (e.g., schools, community centers, or public hotspots)",
+      subTitle: "",
+      subInfo: [
+        "Designed and implemented a robust state management architecture using BLoC (Flutter)",
+        "Integrated smooth and responsive UI/UX with high-fidelity animations",
+
+        "Ensured cross-platform compatibility and responsiveness across a wide range of devices and screen sizes",
+        "Built secure authentication and session handling, protecting user data and network usage rights",
+        "Set up CI/CD pipelines using GitHub Actions / GitLab CI / Bitrise for automated testing, builds, and deployments (APK generation, TestFlight, Play Store release).",
+      ],
+      stack: ["Flutter", "Dart", "DartFrog", "Bloc", "API rest", "Integration API", "CI/CD"],
+
+
     },
     {
       company: "Synapse-Hub",
@@ -89,6 +146,10 @@ export default function Home() {
         "Firebase",
         "PostgreSQL",
         "Next.js",
+        "DevOps",
+        "AWS",
+        "CI/CD",
+        "GitHub Actions"
       ],
       links: [
         {
@@ -102,7 +163,15 @@ export default function Home() {
       name: "GoBus web",
       description:
         "Development of web services (Sass) and virtual payment services of the platform",
-      stack: ["Next.js", "TypeScript", "Firebase", "Tailwind CSS"],
+      stack: [
+        "Next.js",
+        "TypeScript",
+        "Firebase",
+        "Tailwind CSS",
+        "DevOps",
+        "AWS",
+        "CI/CD",
+        "GitHub Actions"],
       links: [
         {
           name: "Gobus official web site",
@@ -115,7 +184,16 @@ export default function Home() {
       name: "Campusco",
       description:
         "An online learning platform for universities with customizable features.",
-      stack: ["React.js", "TypeScript", "Tailwind CSS", "Firebase"],
+      stack: [
+        "React.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "PostgreSQL",
+        "Firebase",
+        "DevOps",
+        "AWS",
+        "CI/CD",
+        "GitHub Actions"],
       links: [
         {
           name: "Visit Website",
@@ -127,7 +205,7 @@ export default function Home() {
       name: "GoBus App",
       description:
         "GPS tracking application for school buses to improve student safety.",
-      stack: ["Flutter", "Dart", "Firebase"],
+      stack: ["Flutter", "Dart", "DartFrog", "Bloc", "Firebase", "CI / CD"],
       links: [
         {
           name: "Google Play",
@@ -143,7 +221,7 @@ export default function Home() {
       name: "Connectis Client",
       description:
         "Mobile app for managing internet access codes and connecting to Cambium devices.",
-      stack: ["Flutter", "Dart", "Kotlin", "Swift", "PostgreSQL"],
+      stack: ["Flutter", "Dart", "DartFrog", "Bloc", "API rest", "Integration API", "CI/CD"],
       links: [
         {
           name: "Google Play",
@@ -177,7 +255,7 @@ export default function Home() {
       "Tailwind CSS"
     ],
     databases: ["PostgreSQL", "MySQL", "Firebase", "Superbase", "Appwrite", "MongoDB"],
-    others: ["Git", "Docker", "Swagger", "Api", "Agile / SCRUM"],
+    others: ["DevOps", "Git", "Docker", "Swagger", "Api", "Agile / SCRUM"],
   };
 
   const education = {
@@ -267,7 +345,7 @@ export default function Home() {
                   <span className="font-extrabold"> AI integration</span> for intelligent decision-making and personalized user experiences (e.g., recommendation systems, classification models)
                 </li>
                 <li>
-                  <span className="font-extrabold">Database design, management, and deployment</span> in collaborative environments using PostgreSQL, Firebase, and TypeORM
+                  <span className="font-extrabold"></span>Database design, management, and deployment in collaborative environments using PostgreSQL, Firebase, and TypeORM
                 </li>
               </ul>
 
@@ -295,6 +373,10 @@ export default function Home() {
               <h3 className="text-xl font-semibold">{exp.role} | {exp.company}</h3>
               <p className="text-gray-600">{exp.period}</p>
               <p className="mt-2">{exp.description}</p>
+              <p className='font-extrabold'>{exp.subTitle}</p>
+              <ul className="flex flex-col text-justify items-start justify-end pt-2 space-y-2 list-disc list-inside">{exp.subInfo?.map((sub, i) => (
+                <li key={i}>{sub}</li>
+              ))}</ul>
               <ul className="flex flex-wrap mt-2 gap-2">
                 {exp.stack.map((tech, i) => (
                   <li
