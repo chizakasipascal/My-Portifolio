@@ -322,7 +322,7 @@ export default function Home() {
         className="pt-24 pb-16 bg-gray-100 px-6 text-center"
       >
         <div className="container mx-auto max-w-4xl">
-          <h2 className="text-3xl font-bold mb-4">About me</h2>
+
           <div className="container mx-auto max-w-4xl">
             <h2 className="text-3xl font-bold mb-4">About me</h2>
             <div className="flex flex-col items-start text-justify px-4 max-w-4xl mx-auto space-y-4">
