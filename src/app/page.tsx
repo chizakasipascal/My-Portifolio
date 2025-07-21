@@ -245,19 +245,47 @@ export default function Home() {
       >
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl font-bold mb-4">About me</h2>
-          <p className="text-lg leading-relaxed text-justify">
-            I’m a passionate and dedicated software engineer with several years of experience in building modern, high-performance web and mobile applications.
-            Strong technical expertise:
-            Native and cross-platform mobile development <span className='font-extrabold'>(Flutter,React-Native,Kotlin)</span>  Dynamic and responsive web development with <span className='font-extrabold'> Next.js, React, and Tailwind CSS Scalable backend architecture using NestJS. </span>
-            Proficient in project planning, technical documentation, and agile teamwork
-            Whether it's Android, iOS, or web platforms, I bring innovative and reliable solutions tailored to real-world needs. I take pride in delivering quality results through collaboration and user-focused design.
-            If you’re looking for a versatile, passionate, and results-driven developer to join your team or elevate your project — let’s connect! I’m ready to bring your vision to life. <span className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'>pascalkasichiza@gmail.com</span>
-          </p>
+          <div className="container mx-auto max-w-4xl">
+            <h2 className="text-3xl font-bold mb-4">About me</h2>
+            <div className="flex flex-col items-start text-justify px-4 max-w-4xl mx-auto space-y-4">
+              <p className="text-lg leading-relaxed text-justify">
+                I’m a passionate and dedicated software engineer with several years of experience in building modern, high-performance web and mobile applications.
+              </p>
+
+              <span className="font-extrabold">Strong technical expertise:</span>
+
+              <ul className="flex flex-col text-justify items-start justify-end pt-2 space-y-2 list-disc list-inside">
+                <li>
+                  <span className="font-extrabold">Native and cross-platform mobile development</span> (Flutter, React Native, Kotlin)
+                </li>
+                <li><span className="font-extrabold">Dynamic and responsive web development</span> with Next.js, React, and Tailwind CSS</li>
+                <li><span className="font-extrabold">Scalable backend architecture using NestJS and Node.js</span></li>
+                <li className="text-justify">
+                  <span className="font-extrabold">Data analysis and dashboard design</span> with JavaScript (Danfo.js, Data-Forge, Fetching from APIs, File Handling, Database Interaction, Data Cleaning), and Data Visualization (Chart.js, Plotly.js, ECharts, D3.js)
+                </li>
+                <li className="text-justify">
+                  <span className="font-extrabold"> AI integration</span> for intelligent decision-making and personalized user experiences (e.g., recommendation systems, classification models)
+                </li>
+                <li>
+                  <span className="font-extrabold">Database design, management, and deployment</span> in collaborative environments using PostgreSQL, Firebase, and TypeORM
+                </li>
+              </ul>
+
+              <span>📋 Proficient in project planning, technical documentation, and agile teamwork</span>
+              <span>💡 Whether it's Android, iOS, or web platforms, I bring innovative and reliable solutions tailored to real-world needs.</span>
+              <span>🤝 I take pride in delivering quality results through collaboration and user-focused design.</span>
+              <span className="text-justify">
+                If you’re looking for a versatile, passionate, and results-driven developer or data-driven problem solver to join your team or elevate your project — let’s connect!
+              </span>
+              <span className="font-extrabold">I’m ready to bring your vision to life.</span>
+            </div>
+
+          </div>
         </div>
-      </section>
+      </section >
 
       {/* Experience Section */}
-      <section id="experience" className="py-16 px-6">
+      < section id="experience" className="py-16 px-6" >
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl font-bold mb-8 text-center">
             Professional experience
@@ -280,10 +308,10 @@ export default function Home() {
             </div>
           ))}
         </div>
-      </section>
+      </ section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-16 bg-gray-100 px-6">
+      <section id="projects" className="py-16 bg-gray-100 px-6" >
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl font-bold mb-8 text-center">Completed Projects</h2>
           <div className="grid md:grid-cols-2 gap-6">
@@ -321,10 +349,10 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section >
 
       {/* Skills Section */}
-      <section id="skills" className="py-16 px-6">
+      < section id="skills" className="py-16 px-6" >
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-3xl font-bold mb-8 text-center">Skills</h2>
           <div className="space-y-6">
@@ -382,7 +410,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </ section>
 
       {/* Education Section */}
       {/* <section id="education" className="py-16 bg-gray-100 px-6">
@@ -452,7 +480,7 @@ export default function Home() {
       <footer className="bg-gray-900 text-white text-center py-4">
         <p>© {myDate.getFullYear()} Pascal C. All rights reserved.</p>
       </footer>
-    </div>
+    </div >
   );
 
 }
