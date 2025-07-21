@@ -1,6 +1,8 @@
 'use client'
 import { useState } from 'react';
 
+import Image from 'next/image';
+
 export default function Home() {
   const [activeTab, setActiveTab] = useState("about");
   const myDate = new Date();
@@ -323,7 +325,16 @@ export default function Home() {
       >
         <div className="container mx-auto max-w-4xl">
 
-          <div className="container mx-auto max-w-4xl">
+          <div className=" container mx-auto max-w-4xl">
+            <div className="flex justify-center items-center">
+              <Image
+                src="/avatar.jpeg"
+                alt="Avatar"
+                width={250}
+                height={250}
+                className="rounded-full border-4 border-gray-300 shadow-md transition-all duration-300 ease-in-out hover:scale-105 hover:bg-gray-800 hover:shadow-xl"
+              />
+            </div>
             <h2 className="text-3xl font-bold mb-4">About me</h2>
             <div className="flex flex-col items-start text-justify px-4 max-w-4xl mx-auto space-y-4">
               <p className="text-lg leading-relaxed text-justify">
